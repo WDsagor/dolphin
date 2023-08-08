@@ -17,8 +17,8 @@ const menuItem = (
 
 const Navbar = () => {
   return (
-    <nav className=" sticky backdrop-filter: blur(8px); shadow-sm ">
-      <div className="navbar bg-transparent max-w-screen-2xl mx-auto">
+    <nav className="container rounded-3xl left-1/2 translate-x-[-50%] z-50 backdrop-filter: blur(10px) shadow-lg fixed">
+      <div className="navbar max-w-screen-2xl mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">

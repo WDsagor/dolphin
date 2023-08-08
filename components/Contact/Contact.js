@@ -12,9 +12,9 @@ const Contact = () => {
 
   const onSubmit = () => {};
   return (
-    <div className=" hero min-h-screen">
+    <div className="hero mx-auto container min-h-screen pt-24">
       <div className=" max-w-screen-2xl mx-auto">
-        <div className=" lg:flex justify-between">
+        <div className=" lg:flex justify-stretch">
           <div className="max-w-md justify-start align-middle px-2 lg:mr-20 lg:mt-20">
             <h1 className="mb-5 text-5xl font-bold pt-10">Contact us</h1>
             <div className=" flex items-start">
@@ -172,7 +172,7 @@ const Contact = () => {
                 )}
               </div>
               <div className="form-control mt-6">
-                <input type="submit" value="submit" className="btn btn-primary text-orange-600" />
+                <input type="submit" value="submit" className="btn btn-primary text-white" />
               </div>
             </form>
           </div>

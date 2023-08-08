@@ -1,6 +1,6 @@
 import React from "react";
 export const metadata = {
-  title: "About page-Dolphin Stationery",
+  title: "About | Dolphin Stationery",
   description: "For any feedbacks or improvements on our online store, please fill in this contact form. ",
 };
 const About = () => {
