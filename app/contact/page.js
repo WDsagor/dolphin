@@ -9,6 +9,7 @@ const Page = () => {
   return (
     <section>
       <Contact />
+      <Contact />
     </section>
   );
 };

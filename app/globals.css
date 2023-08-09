@@ -7,8 +7,8 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 254, 254, 254; */
   background: #ffd89b;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom, #9cd3f8, #ffedd1);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to top, #9cd3f8, #ffedd1); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: -webkit-linear-gradient(to bottom, #9cd3f8, #ffffff);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #9cd3f8, #ffffff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   
 }
 /* 

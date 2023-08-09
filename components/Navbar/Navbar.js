@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useEffect, useState } from "react";
 const menuItem = (
   <>
     <li className="mx-2">
@@ -16,8 +17,24 @@ const menuItem = (
 );
 
 const Navbar = () => {
+  const [stickyNav, setStickyNav] = useState("fixed");
+
+  useEffect(() => {
+    let prevScrollPos = window.scrollY;
+    window.onscroll = function () {
+      let currentScrollPo = window.scrollY;
+      if (prevScrollPos > currentScrollPo) {
+        setStickyNav("fixed bg-white");
+      } else {
+        setStickyNav("hidden");
+      }
+      prevScrollPos = currentScrollPo;
+    };
+  }, []);
   return (
-    <nav className="container rounded-3xl left-1/2 translate-x-[-50%] z-50 backdrop-filter: blur(10px) shadow-lg fixed">
+    <nav
+      className={`${stickyNav} container rounded-3xl left-1/2 translate-x-[-50%] z-50 backdrop-filter: blur(10px) shadow-lg `}
+    >
       <div className="navbar max-w-screen-2xl mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
