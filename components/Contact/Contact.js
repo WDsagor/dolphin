@@ -172,7 +172,7 @@ const Contact = () => {
                 )}
               </div>
               <div className="form-control mt-6">
-                <input type="submit" value="submit" className="btn btn-primary text-white" />
+                <input type="submit" value="submit" className="btn btn-outline btn-primary" />
               </div>
             </form>
           </div>

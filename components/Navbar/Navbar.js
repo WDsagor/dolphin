@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 const menuItem = (
   <>
     <li className="mx-2">
@@ -12,6 +13,9 @@ const menuItem = (
     </li>
     <li className="mx-2">
       <Link href="/contact">Contact</Link>
+    </li>
+    <li className="mx-2">
+      <Link href="/login">Log In</Link>
     </li>
   </>
 );
@@ -26,7 +30,7 @@ const Navbar = () => {
       if (prevScrollPos > currentScrollPo) {
         setStickyNav("fixed bg-white");
       } else {
-        setStickyNav("hidden");
+        setStickyNav("top-[-100]");
       }
       prevScrollPos = currentScrollPo;
     };
@@ -58,7 +62,7 @@ const Navbar = () => {
           </div>
           <>
             <Link href="/" className="btn text-primary btn-ghost normal-case text-xl">
-              Dolphin Stationery
+              <Image width={80} height={40} src="/images/logo.jpg" alt="logo" />
             </Link>
           </>
         </div>
@@ -66,7 +70,7 @@ const Navbar = () => {
           <input
             type="text"
             placeholder="Search products here..."
-            className="input input-bordered bg-transparent input-sm lg:min-w-[450px] "
+            className="input input-bordered bg-transparent input-sm lg:min-w-[350px] "
           />
           <button className="ml-[-30px]">
             <svg
