@@ -1,6 +1,6 @@
+import SocialLogin from "@/components/SocialLogin/SocialLogin";
+import Link from "next/link";
 import React from "react";
-import { FaFacebook } from "react-icons/fa";
-import { FcGoogle } from "react-icons/fc";
 
 const page = () => {
   return (
@@ -11,7 +11,6 @@ const page = () => {
         backgroundSize: "cover",
       }}
     >
-      {/* <div className="hero-overlay bg-opacity-20"></div> */}
       <div className="hero min-h-screen container mx-auto">
         <div className="flex w-full justify-around flex-col lg:flex-row">
           <div className="text-center max-w-lg text-slate-300">
@@ -31,23 +30,23 @@ const page = () => {
                   <span className="label-text">Password</span>
                 </label>
                 <input type="text" placeholder="password" className="input input-bordered" />
-                <label className="label">
-                  <a href="#" className="label-text-alt link link-hover">
-                    Forgot password?
-                  </a>
-                </label>
+                <div className="flex flex-col lg:flex-row lg:justify-between">
+                  <label className="label">
+                    <Link href="#" className="label-text-alt link link-hover">
+                      Forgot password?
+                    </Link>
+                  </label>
+                  <label className="label">
+                    <Link href="/register" className="label-text-alt link link-hover">
+                      Don't have account?
+                    </Link>
+                  </label>
+                </div>
               </div>
               <div className="form-control mt-6">
                 <button className="btn btn-outline btn-primary">Login</button>
               </div>
-              <div className="py-5 text-center">
-                <p>or you can login with</p>
-
-                <div className="flex gap-3 justify-center py-2 text-blue-600">
-                  <FaFacebook className="text-green cursor-pointer" size={30} />
-                  <FcGoogle className="cursor-pointer" size={30} />
-                </div>
-              </div>
+              <SocialLogin />
             </div>
           </div>
         </div>
